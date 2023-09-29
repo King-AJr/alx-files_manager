@@ -1,5 +1,3 @@
-// utils/redis.js
-
 const redis = require('redis');
 
 class RedisClient {
@@ -14,8 +12,6 @@ class RedisClient {
 
   isAlive() {
       return this.client.connected;
-    // return this.client.connect();
-    // return this.client.ping();
   }
 
   async get(key) {
