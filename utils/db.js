@@ -16,13 +16,13 @@ class DBClient {
     return this.client.isConnected();
   }
 
-  async nbUsers() {
+  async cntUsers() {
     const collection = this.client.db().collection('users');
     const count = await collection.countDocuments();
     return count;
   }
 
-  async nbFiles() {
+  async cntFiles() {
     const collection = this.client.db().collection('files');
     const count = await collection.countDocuments();
     return count;
