@@ -48,8 +48,8 @@ class DBClient {
     return count;
   }
 
-  async findUserEmail(email) {
-    return this.client.db().collection('users').findOne({ email });
+  async userCollection() {
+    return this.client.db().collection('users');
   }
 }
 
